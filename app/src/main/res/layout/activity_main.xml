@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.xsm.progressview.MainActivity">
+
+    <!--app:iconHeight="30dp"-->
+    <com.xsm.progressview.ProgressView
+        android:id="@+id/progress_view"
+        android:layout_marginTop="30dp"
+        app:icon="@mipmap/pag"
+        app:progressBarHeight="15dp"
+        app:progressPadding="2dp"
+        app:progressColor="@color/colorPrimary"
+        app:borderColor="@color/colorAccent"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:onClick="btnStart"
+        android:text="开启进度条"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+
