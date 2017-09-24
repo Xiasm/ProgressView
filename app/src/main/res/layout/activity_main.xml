@@ -7,7 +7,10 @@
     android:layout_height="match_parent"
     tools:context="com.xsm.progressview.MainActivity">
 
+    <!--icon高度一般为默认，如果强制指定icon的高度，可能会使图片变形-->
     <!--app:iconHeight="30dp"-->
+    <!--layout_height一般设为wrap_content，ProgressView计算控件的绘制高度为icon的高度加上进度条的高度
+    如若强制指定，进度条下方会有部分空白区域-->
     <com.xsm.progressview.ProgressView
         android:id="@+id/progress_view"
         android:layout_marginTop="30dp"
