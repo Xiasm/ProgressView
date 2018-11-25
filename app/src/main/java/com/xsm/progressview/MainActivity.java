@@ -10,7 +10,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
-    private ProgressView progressView;
+    private ProgressView mProgressView;
 
     private int number = 0;
 
@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        progressView = (ProgressView) findViewById(R.id.progress_view);
-        progressView.setProgressListener(new ProgressView.ProgressListener() {
+        mProgressView = (ProgressView) findViewById(R.id.progress_view);
+        mProgressView.setProgressListener(new ProgressView.ProgressListener() {
             @Override
             public void progressFinish() {
                 Toast.makeText(MainActivity.this, "进度完成", Toast.LENGTH_SHORT).show();
@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void btnStart(View view) {
         Log.d(TAG, "btnStart: width=" + dp2px(300) + "  height=" + dp2px(30));
-        progressView.setProgress(0);
+        mProgressView.setProgress(0);
         number = 0;
         handler.postDelayed(mRunnable, 100);
 
